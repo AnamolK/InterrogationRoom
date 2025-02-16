@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class mouseOverBehavior : MonoBehaviour
 {
-
     private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
@@ -19,13 +18,19 @@ public class mouseOverBehavior : MonoBehaviour
     {
     }
 
-    void OnMouseOver() {
-        spriteRenderer.enabled = true;
-        Debug.Log("Mouse Over");
+    // Corrected method name (capital "O")
+    void OnMouseDown() 
+    {
+        Debug.Log("ITEM CLICKED");
     }
 
-    void OnMouseExit() {
+    void OnMouseOver() 
+    {
+        spriteRenderer.enabled = true;
+    }
+
+    void OnMouseExit() 
+    {
         spriteRenderer.enabled = false;
-        Debug.Log("Mouse Not Over");
     }
 }
